@@ -10,11 +10,9 @@ import { ExternalLink } from "./ExternalLink";
 import { ThemedText } from "./ThemedText";
 import { ThemedView } from "./ThemedView";
 import { Article } from "@/constants/Article";
+import { url } from "@/env/url-api";
 
 export function CardActu() {
-  const url =
-    "https://newsapi.org/v2/everything?q=(hôtellerie OR restaurant)&searchIn=title&pageSize=8&sortBy=publishedAt&domains=francetvinfo.fr,ouest-france.fr,marianne.net,lesechos.fr,konbini.com,leparisien.fr&apiKey=0c0a8b23304e4447ac47e0603e073e78";
-
   const { loading, data } = useFetch(url, {}, []);
 
   return (
